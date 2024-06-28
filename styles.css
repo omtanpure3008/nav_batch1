@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --primary: white;
+    --seconday: #c8c8c8;
+    --background: #111;
+    --third: rgb(0, 149, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: var(--background);
+}
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    /* background-color: lightblue; */
+}
+
+.left {
+    height: 100%;
+    width: 20%;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left h1 {
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.left h1 span {
+    color: var(--third);
+    font-weight: 700;
+}
+
+.mid {
+    width: 60%;
+    height: 100%;
+    /* background-color: plum; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mid a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    margin: 0 1vw;
+    font-size: 1.2vw;
+}
+
+.mid a:hover {
+    color: var(--seconday);
+    cursor: pointer;
+}
+
+.right {
+    width: 20%;
+    height: 100%;
+    /* background-color: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right i {
+    display: none;
+}
+
+.right button {
+    font-size: 1.1vw;
+    padding: .8vw 1vw;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--third);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+
+
+
+@media (min-width: 1px) and (max-width: 430px) {
+    .mid {
+        display: none;
+    }
+
+    .left {
+        width: 50%;
+        /* background-color: lightblue; */
+        justify-content: left;
+        padding: 0 3vh;
+    }
+
+    .left h1 {
+        font-size: 4vw;
+    }
+
+    .right {
+        width: 50%;
+        /* background-color: pink; */
+        justify-content: flex-end;
+        padding: 0 3vh;
+    }
+
+    .right button {
+        display: none;
+    }
+
+    .right i {
+        display: block;
+        color: var(--primary);
+        font-size: 5vw;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 3vh;
+        position: absolute;
+        height: calc(100% - 100px);
+        width: 100%;
+        background-color: var(--primary);
+        left: 0;
+        top: 100px;
+    }
+
+    .dropdown a {
+        color: var(--background);
+        font-size: 4vw;
+        margin: 3vw 0;
+    }
+}
